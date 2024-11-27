@@ -11,10 +11,9 @@ This projects develope by Yohannes Alemu
 
 Steps to Run the Project
 Step 1: Clone the Repository
-bash
-Copy code
+```
 git clone  https://github.com/yohannes4321/Langchain
-cd langchain
+cd langchain```
 Step 2: Set up Virtual Environment
 Create a Python virtual environment using Python 3.10:
 
