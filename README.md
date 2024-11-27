@@ -17,40 +17,34 @@ cd langchain```
 Step 2: Set up Virtual Environment
 Create a Python virtual environment using Python 3.10:
 
-bash
-Copy code
-python3.10 -m venv venv
+ 
+```python3.10 -m venv venv```
 Step 3: Activate the Virtual Environment
 Activate the virtual environment using the following command:
 
 On Linux/Mac:
-
-bash
-Copy code
-source venv/bin/activate
+ 
+```source venv/bin/activate```
 On Windows:
 
-bash
-Copy code
-.\venv\Scripts\activate
+ 
+```.\venv\Scripts\activate```
 Step 4: Install Dependencies
 Install the required dependencies listed in the requirements.txt file:
 
-bash
-Copy code
-pip install -r requirements.txt
+ 
+```pip install -r requirements.txt```
 Step 5: Set up Environment Variables
 Create a .env file in the root directory of the project and add the following API key:
 
 makefile
-Copy code
-GOOGLE_API_KEY="<your-google-api-key>"
+ 
+```GOOGLE_API_KEY="<your-google-api-key>"```
 You can get your Google API key from the Google Cloud Console.
 
 Step 6: Run the Application
 To start the application and launch the Streamlit interface, run:
 
-bash
-Copy code
-streamlit run app.py
+ 
+```streamlit run app.py```
 This will open the application in your browser.
