@@ -4,11 +4,11 @@ from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_google_genai import HarmBlockThreshold, HarmCategory
 
-# Ensure Google API key is set in environment variables
+ 
 if "GOOGLE_API_KEY" not in os.environ:
     os.environ["GOOGLE_API_KEY"] = getpass.getpass("Enter your Google AI API key: ")
 
-# Initialize the Google Generative AI model
+ 
 llm = ChatGoogleGenerativeAI(
     model="gemini-1.5-pro",
     temperature=0,
@@ -18,7 +18,7 @@ llm = ChatGoogleGenerativeAI(
     # other params...
 )
 
-# Basic example: Translate English to French
+ 
 messages = [
     (
         "system",
@@ -29,7 +29,7 @@ messages = [
 ai_msg = llm.invoke(messages)
 print(ai_msg.content)
 
-# Using ChatPromptTemplate for flexible translations
+ 
 prompt = ChatPromptTemplate.from_messages(
     [
         (
@@ -50,7 +50,7 @@ result = chain.invoke(
 )
 print(result.content)
 
-# Example of adding safety settings
+ 
 llm_with_safety = ChatGoogleGenerativeAI(
     model="gemini-1.5-pro",
     safety_settings={
