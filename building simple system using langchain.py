@@ -7,7 +7,7 @@ from langchain_google_genai import HarmBlockThreshold, HarmCategory
  
 if "GOOGLE_API_KEY" not in os.environ:
     os.environ["GOOGLE_API_KEY"] = getpass.getpass("Enter your Google AI API key: ")
-
+# i have here to cheak if Google_api_key is available 
  
 llm = ChatGoogleGenerativeAI(
     model="gemini-1.5-pro",
@@ -15,8 +15,9 @@ llm = ChatGoogleGenerativeAI(
     max_tokens=None,
     timeout=None,
     max_retries=2,
-    # other params...
+    
 )
+# the assitant is transelating text to another language
 
  
 messages = [
@@ -50,7 +51,7 @@ result = chain.invoke(
 )
 print(result.content)
 
- 
+ # i have put for safeity for gemini setting to block dangourse and harmfull content
 llm_with_safety = ChatGoogleGenerativeAI(
     model="gemini-1.5-pro",
     safety_settings={
